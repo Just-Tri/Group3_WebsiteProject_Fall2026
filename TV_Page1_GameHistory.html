@@ -1,12 +1,10 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>History of Video Games</title>
     <style>
         :root {
-            /* Custom variables to control the shake behavior */
-            --shake-angle: 1deg; /* Maximum rotation offset angle */
-            --shake-interval: 4000ms; /* Frequency interval for the shake cycle */
+            --shake-angle: 1deg;
+            --shake-interval: 4000ms;
         }
 
         body {
@@ -15,7 +13,6 @@
             padding: 0;
         }
 
-        /* Expanded container width to stretch content across the screen */
         .page-container {
             max-width: 1200px;
             width: 90%;
@@ -43,7 +40,6 @@
             object-fit: cover;
         }
 
-        /* Rotational Shake Animation using CSS variables */
         @keyframes periodicShake {
             0%, 100% {
                 transform: rotate(0deg);
@@ -78,24 +74,14 @@
             }
         }
 
-        /* Center the dropdown container */
         .info-dropdown {
             margin: 20px auto;
             text-align: center;
             width: 100%;
         }
 
-            /* Remove default triangle arrow marker */
             .info-dropdown summary {
                 list-style: none;
-            }
-
-                .info-dropdown summary::-webkit-details-marker {
-                    display: none;
-                }
-
-            /* Flexible oval button styling */
-            .info-dropdown summary {
                 display: inline-flex;
                 flex-direction: column;
                 justify-content: center;
@@ -103,42 +89,41 @@
                 padding: 12px 28px;
                 min-height: 50px;
                 max-width: 500px;
-                background-color: #004085; /* Darker blue color */
-                border: 3px solid #ffc107; /* Yellow border */
-                box-shadow: 0 0 12px #ffc107; /* Yellow glow matching the border */
+                background-color: #004085;
+                border: 3px solid #ffc107;
+                box-shadow: 0 0 12px #ffc107;
                 color: white;
                 font-weight: bold;
                 border-radius: 50px;
                 cursor: pointer;
                 user-select: none;
                 gap: 6px;
-                /* Uses the variable to control interval length */
                 animation: periodicShake var(--shake-interval) infinite ease-in-out;
             }
 
-                .info-dropdown summary:hover {
-                    background-color: #002752; /* Slightly darker shade on hover */
-                    box-shadow: 0 0 18px #ffc107; /* Slightly stronger yellow glow on hover */
+                .info-dropdown summary::-webkit-details-marker {
+                    display: none;
                 }
 
-        /* Arrow styling inside the button */
+                .info-dropdown summary:hover {
+                    background-color: #002752;
+                    box-shadow: 0 0 18px #ffc107;
+                }
+
         .arrow-icon {
             font-size: 14px;
             line-height: 1;
             transition: transform 0.3s ease;
         }
 
-        /* Flip arrow when the details element is expanded */
         .info-dropdown[open] .arrow-icon {
             transform: rotate(180deg);
         }
 
-        /* Stop shake animation when the dropdown is open */
         .info-dropdown[open] summary {
             animation: none;
         }
 
-        /* Dropdown Content Container */
         .dropdown-content {
             display: flex;
             flex-direction: column;
@@ -152,11 +137,10 @@
                 width: 100%;
             }
 
-        /* Side-by-side row container for image units with 80px gap */
         .image-row {
             display: flex;
             justify-content: center;
-            align-items: flex-end; /* Aligns bottom edges of image units */
+            align-items: flex-end;
             gap: 80px;
             width: 100%;
             margin-top: 20px;
@@ -166,15 +150,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-end; /* Pushes image down to same level */
+            justify-content: flex-end;
             width: 300px;
             text-align: center;
         }
 
-            /* Subtler green glowing image titles with reserved height */
             .image-unit h5 {
                 margin: 0 0 10px 0;
-                min-height: 48px; /* Reserves uniform vertical space for text */
+                min-height: 48px;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
@@ -184,7 +167,6 @@
                 text-shadow: 0 0 4px rgba(0, 255, 102, 0.6);
             }
 
-        /* Larger image size override for modern section */
         .image-unit-large {
             width: 420px;
         }
@@ -200,12 +182,10 @@
             margin-top: 4px;
         }
 
-        /* Separator gap style between modern and historical sections */
         .section-spacer {
             margin: 60px 0 30px 0;
         }
 
-        /* Try It Out Button Styling */
         .play-btn {
             display: inline-block;
             margin-top: 15px;
@@ -228,21 +208,18 @@
             }
     </style>
 </head>
-
 <body>
     <div class="page-container">
         <h1 style="text-align: center;">History of Video Games</h1>
 
         <br>
 
-        <!-- 1. Modern Pre-Intro Paragraph -->
         <p>
             A video game is an interactive electronic game played using an input device to generate visual feedback on a screen.
             From the vast, persistent online world of The Elder Scrolls Online bringing thousands of players together in a single universe, to the hyper-realistic visual fidelity of Cyberpunk 2077, modern gaming pushes network infrastructure and visual hardware to limits once thought unthinkable.
             Today's interactive experiences rely on complex servers and billions of calculations per second to connect global communities in real time, yet this massive medium traces back to a far simpler era of technology.
         </p>
 
-        <!-- 2. Modern Games Image Pair (Scaled Up to 420x420) -->
         <div class="image-row">
             <div class="image-unit image-unit-large">
                 <h5>Cyberpunk 2077</h5>
@@ -254,15 +231,12 @@
             </div>
         </div>
 
-        <!-- Vertical gap between sections -->
         <div class="section-spacer"></div>
 
-        <!-- 3. Historical Overview Paragraph -->
         <p>
             The history of video games stretches back to the late 1950s, a period when computers were massive, room-sized machines used almost exclusively for scientific research and military defense. During an open house at the Brookhaven National Laboratory on October 18, 1958, nuclear physicist William Higinbotham sought a way to make the facility's scientific exhibits more engaging for visitors. Leveraging an analog computer designed to calculate missile trajectories and a five-inch oscilloscope screen, Higinbotham designed <i>Tennis for Two</i>; a simple simulation displaying a side view of a tennis court with a bouncing dot for a ball. Connected to custom-built handheld controllers featuring a dial for angle control and a button to strike the ball, it became an instant sensation, marking a foundational moment as one of the very first interactive electronic games created purely for human entertainment.
         </p>
 
-        <!-- Flexible Oval Button Dropdown Section: Tennis for Two -->
         <details class="info-dropdown">
             <summary>
                 <span>Tennis for Two (1958) by Physicist William Higinbotham</span>
@@ -289,28 +263,23 @@
             </div>
         </details>
 
-        <!-- Main Display Section: Tennis for Two -->
         <div class="outer-container" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
             <div class="image-row">
                 <img src="Images/TennisForTwo_1.gif" alt="Image of Tennis for Two 1">
                 <img src="Images/TennisForTwo_2.gif" alt="Image of Tennis for Two 2">
             </div>
 
-            <!-- External Game Link Button -->
             <a href="https://eastcoastinteractive.itch.io/tennis-for-two" target="_blank" class="play-btn">
                 Try It Out on itch.io &#9654;
             </a>
         </div>
 
-        <!-- Vertical gap between historical games -->
         <div class="section-spacer"></div>
 
-        <!-- 4. Spacewar! Overview Paragraph -->
         <p>
             After <i>Tennis for Two</i> (1958), the next major landmark in video game history was <i>Spacewar!</i>, created in 1962 by Steve Russell and a team at MIT on a DEC PDP-1 computer. Allowing two players to maneuver spaceships around a central star while shooting at one another, it became the first digital computer game to spread across multiple academic institutions and serves as a vital bridge to the commercial video game industry.
         </p>
 
-        <!-- Flexible Oval Button Dropdown Section: Spacewar! -->
         <details class="info-dropdown">
             <summary>
                 <span>Spacewar! (1962) by Steve Russell & MIT Team</span>
@@ -337,14 +306,12 @@
             </div>
         </details>
 
-        <!-- Main Display Section: Spacewar! -->
         <div class="outer-container" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
             <div class="image-row">
                 <img src="Images/SpaceWar1.jpg" alt="Image of Space War 1">
                 <img src="Images/SpaceWar2.jpg" alt="Image of Space War 2">
             </div>
 
-            <!-- External Game Link Button -->
             <a href="https://www.masswerk.at/spacewar/" target="_blank" class="play-btn">
                 Try It Out on masswerk.at &#9654;
             </a>
