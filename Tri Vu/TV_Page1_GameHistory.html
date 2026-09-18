@@ -1,0 +1,520 @@
+<html>
+<head>
+    <title>History of Video Games</title>
+    <style>
+        :root {
+            --shake-angle: 1deg;
+            --shake-interval: 4000ms;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: darkslategray;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page-container {
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation Bar Styles */
+        .menubar {
+            list-style-type: none;
+            margin: 0;
+            top: 0;
+            height: 45px;
+            overflow: hidden;
+            background-color: #0c9661;
+            border: 3px solid black;
+        }
+
+            .menubar li {
+                float: left;
+            }
+
+                .menubar li a {
+                    color: #b9ebd6;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 30px;
+                    padding: 35px 75px;
+                    text-decoration: none;
+                }
+
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: larger;
+            font-weight: 500;
+            color: white;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 1000;
+            color: white;
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffc107;
+            font-size: 26px;
+            margin: 40px 0 15px 0;
+            text-align: left;
+            border-bottom: 2px solid rgba(255, 193, 7, 0.3);
+            padding-bottom: 8px;
+        }
+
+        @keyframes periodicShake {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+
+            3% {
+                transform: rotate(calc(-1 * var(--shake-angle)));
+            }
+
+            6% {
+                transform: rotate(var(--shake-angle));
+            }
+
+            9% {
+                transform: rotate(calc(-0.8 * var(--shake-angle)));
+            }
+
+            12% {
+                transform: rotate(calc(0.8 * var(--shake-angle)));
+            }
+
+            15% {
+                transform: rotate(calc(-0.4 * var(--shake-angle)));
+            }
+
+            18% {
+                transform: rotate(calc(0.4 * var(--shake-angle)));
+            }
+
+            21% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .info-dropdown {
+            margin: 20px auto;
+            text-align: center;
+            width: 100%;
+        }
+
+            .info-dropdown summary {
+                list-style: none;
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 12px 28px;
+                min-height: 50px;
+                max-width: 500px;
+                background-color: #004085;
+                border: 3px solid #ffc107;
+                box-shadow: 0 0 12px #ffc107;
+                color: white;
+                font-weight: bold;
+                border-radius: 50px;
+                cursor: pointer;
+                user-select: none;
+                gap: 6px;
+                animation: periodicShake var(--shake-interval) infinite ease-in-out;
+            }
+
+                .info-dropdown summary::-webkit-details-marker {
+                    display: none;
+                }
+
+                .info-dropdown summary:hover {
+                    background-color: #002752;
+                    box-shadow: 0 0 18px #ffc107;
+                }
+
+        .arrow-icon {
+            font-size: 14px;
+            line-height: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .info-dropdown[open] .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        .info-dropdown[open] summary {
+            animation: none;
+        }
+
+        .dropdown-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+            .dropdown-content p {
+                text-align: left;
+                width: 100%;
+            }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 80px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .image-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            width: 300px;
+            text-align: center;
+        }
+
+            .image-unit h5 {
+                margin: 0 0 10px 0;
+                min-height: 48px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 16px;
+                color: #00ff66;
+                text-shadow: 0 0 4px rgba(0, 255, 102, 0.6);
+            }
+
+        .image-unit-large {
+            width: 420px;
+        }
+
+            .image-unit-large img {
+                width: 420px;
+                height: 420px;
+            }
+
+        .date-subtext {
+            display: block;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .section-spacer {
+            margin: 60px 0 30px 0;
+        }
+
+        .play-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 32px;
+            background-color: #ffc107;
+            color: #000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 0 12px #ffc107;
+            transition: all 0.2s ease-in-out;
+        }
+
+            .play-btn:hover {
+                background-color: #e0a800;
+                box-shadow: 0 0 20px #ffc107;
+                transform: scale(1.05);
+            }
+
+        /* Article-Style Quick Navigation Block */
+        .quick-nav-container {
+            max-width: 420px;
+            margin: 25px auto 45px auto;
+            background-color: rgba(0, 0, 0, 0.35);
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            padding: 20px 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .quick-nav-title {
+            margin: 0 0 12px 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffc107;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(255, 193, 7, 0.4);
+            padding-bottom: 8px;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding-left: 24px;
+            gap: 8px;
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .nav-item {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
+
+            .nav-item a {
+                display: inline-block;
+                padding: 4px 8px;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 500;
+                border-radius: 6px;
+                transition: all 0.2s ease-in-out;
+            }
+
+                .nav-item a:hover {
+                    background-color: #ffc107;
+                    color: #000000;
+                }
+
+        /* Smooth Color Blending Animation */
+        @keyframes colorShift {
+            0% {
+                background-color: #ffc107;
+                box-shadow: 0 0 12px #ffc107;
+            }
+
+            25% {
+                background-color: #00ff66;
+                box-shadow: 0 0 12px #00ff66;
+            }
+
+            50% {
+                background-color: #00d2ff;
+                box-shadow: 0 0 12px #00d2ff;
+            }
+
+            75% {
+                background-color: #ff007f;
+                box-shadow: 0 0 12px #ff007f;
+            }
+
+            100% {
+                background-color: #ffc107;
+                box-shadow: 0 0 12px #ffc107;
+            }
+        }
+
+        /* Expanding Middle Far-Right Back-to-Top Button */
+        .back-to-top {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            height: 50px;
+            width: 50px;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 13px;
+            animation: colorShift 8s infinite linear;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+            .back-to-top .long-arrow {
+                font-size: 22px;
+                display: inline-block;
+                transform: rotate(-90deg);
+                line-height: 1;
+            }
+
+            .back-to-top .btn-text {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 15px;
+                font-weight: bold;
+                opacity: 0;
+                margin-left: 10px;
+                transition: opacity 0.2s ease-in-out;
+            }
+
+            .back-to-top:hover {
+                width: 150px;
+            }
+
+                .back-to-top:hover .btn-text {
+                    opacity: 1;
+                }
+    </style>
+</head>
+<body>
+    <a href="../Maya Collins/homepage.html">To Next Page</a>
+    <div class="page-container">
+        <h1 style="text-align: center;">History of Video Games</h1>
+
+        <!-- Maya's Navigation Bar -->
+        <div class="menubar">
+            <nav>
+                <ul>
+                    <bold>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="page1.html">Rundown </a></li>
+                        <li><a href="page2.html">Evolution</a></li>
+                        <li><a href="page3.html">Current State</a></li>
+                        <li><a href="page4.html">Industry Future</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </bold>
+                </ul>
+            </nav><br>
+        </div>
+
+        <div id="TableOfContents" class="quick-nav-container">
+            <h3 class="quick-nav-title">Table of Contents</h3>
+            <nav>
+                <ol class="nav-menu">
+                    <li class="nav-item"><a href="#Pre-Intro">Overview & Modern Gaming Context</a></li>
+                    <li class="nav-item"><a href="#Tennis-For-Two">Tennis for Two (1958)</a></li>
+                    <li class="nav-item"><a href="#SpaceWar">Spacewar! (1962)</a></li>
+                </ol>
+            </nav>
+        </div>
+
+        <div id="Pre-Intro">
+            <h2>Overview & Modern Gaming Context</h2>
+            <p>
+                A video game is an interactive electronic game played using an input device to generate visual feedback on a screen.
+                From the vast, persistent online world of The Elder Scrolls Online bringing thousands of players together in a single universe, to the hyper-realistic visual fidelity of Cyberpunk 2077, modern gaming pushes network infrastructure and visual hardware to limits once thought unthinkable.
+                Today's interactive experiences rely on complex servers and billions of calculations per second to connect global communities in real time, yet this massive medium traces back to a far simpler era of technology.
+            </p>
+
+            <div class="image-row">
+                <div class="image-unit image-unit-large">
+                    <h5>Cyberpunk 2077</h5>
+                    <img src="Images/Cyberpunk-2.0-Review-10.gif" alt="Image of Cyberpunk 2077 Graphic">
+                </div>
+                <div class="image-unit image-unit-large">
+                    <h5>The Elder Scrolls Online</h5>
+                    <img src="Images/ESO_Fight.gif" alt="Image of The Elder Scrolls Online alliance war">
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Tennis-For-Two">
+            <h2>Tennis for Two (1958)</h2>
+            <p>
+                The history of video games stretches back to the late 1950s, a period when computers were massive, room-sized machines used almost exclusively for scientific research and military defense. During an open house at the Brookhaven National Laboratory on October 18, 1958, nuclear physicist William Higinbotham sought a way to make the facility's scientific exhibits more engaging for visitors. Leveraging an analog computer designed to calculate missile trajectories and a five-inch oscilloscope screen, Higinbotham designed <i>Tennis for Two</i>; a simple simulation displaying a side view of a tennis court with a bouncing dot for a ball. Connected to custom-built handheld controllers featuring a dial for angle control and a button to strike the ball, it became an instant sensation, marking a foundational moment as one of the very first interactive electronic games created purely for human entertainment.
+            </p>
+
+            <details class="info-dropdown">
+                <summary>
+                    <span>Tennis for Two (1958) by Physicist William Higinbotham</span>
+                    <span class="arrow-icon">&#9660;</span>
+                </summary>
+                <div class="dropdown-content">
+                    <p>
+                        Created in 1958 by physicist William Higinbotham for Brookhaven National Laboratory, <i>Tennis for Two</i> is widely considered the first electronic game built purely for entertainment. Played on a five-inch oscilloscope screen powered by an analog computer, two players used custom aluminum controllers with knobs and buttons to hit a bouncing point of light back and forth over a simulated net.
+                    </p>
+
+                    <div class="image-row">
+                        <div class="image-unit">
+                            <h5>Donner Model 30 analog computer</h5>
+                            <img src="Images/DonnerModel30.png" alt="Image of Donner Model 30 analog computer">
+                        </div>
+                        <div class="image-unit">
+                            <h5>
+                                William Higinbotham
+                                <span class="date-subtext">(October 25, 1910 – November 10, 1994)</span>
+                            </h5>
+                            <img src="Images/Higinbotham.jpeg" alt="Image of William Higinbotham">
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <div class="outer-container" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <div class="image-row">
+                    <img src="Images/TennisForTwo_1.gif" alt="Image of Tennis for Two 1">
+                    <img src="Images/TennisForTwo_2.gif" alt="Image of Tennis for Two 2">
+                </div>
+
+                <a href="file:///C:/Users/ddark/Downloads/PVAMU/Courses/Fall%202026/Fall%202026_COMP_2300/Group3_WebsiteProject_Fall2026/https://ecourses.pvamu.edu/courses" target="_blank" class="play-btn">
+                    Try It Out on itch.io &#9654;
+                </a>
+            </div>
+        </div>
+
+
+        <div id="SpaceWar">
+            <h2>Spacewar! (1962)</h2>
+            <p>
+                After <i>Tennis for Two</i> (1958), the next major landmark in video game history was <i>Spacewar!</i>, created in 1962 by Steve Russell and a team at MIT on a DEC PDP-1 computer. Allowing two players to maneuver spaceships around a central star while shooting at one another, it became the first digital computer game to spread across multiple academic institutions and serves as a vital bridge to the commercial video game industry.
+            </p>
+
+            <details class="info-dropdown">
+                <summary>
+                    <span>Spacewar! (1962) by Steve Russell & MIT Team</span>
+                    <span class="arrow-icon">&#9660;</span>
+                </summary>
+                <div class="dropdown-content">
+                    <p>
+                        Developed in early 1962 using the DEC PDP-1 mainframe computer at MIT, <i>Spacewar!</i> featured custom built dual-joystick controls that enabled two players to battle each other in deep space. Written onto paper tape by Steve Russell, Martin Graetz, and Wayne Wiitanen, the game was freely distributed to computer labs across the country, serving as the blueprint for early digital gaming and inspiring the very first commercial arcade video games.
+                    </p>
+
+                    <div class="image-row">
+                        <div class="image-unit">
+                            <h5>DEC PDP-1 Computer</h5>
+                            <img src="Images/DEC_PDP_1_Computer.jpg" alt="Image of DEC PDP 1 Computer">
+                        </div>
+                        <div class="image-unit">
+                            <h5>
+                                Steve Russell
+                                <span class="date-subtext">(Born March 14, 1937)</span>
+                            </h5>
+                            <img src="Images/SteveRussell.jpg" alt="Image of Steve Russell">
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <div class="outer-container" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <div class="image-row">
+                    <img src="Images/SpaceWar1.jpg" alt="Image of Space War 1">
+                    <img src="Images/SpaceWar2.jpg" alt="Image of Space War 2">
+                </div>
+
+                <a href="https://www.masswerk.at/spacewar/" target="_blank" class="play-btn">
+                    Try It Out on masswerk.at &#9654;
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expanding Middle Far-Right Back to Top Button -->
+    <a href="#TableOfContents" class="back-to-top" title="Back to Top">
+        <span class="long-arrow">&#10140;</span>
+        <span class="btn-text">Back to Top</span>
+    </a>
+</body>
+</html>

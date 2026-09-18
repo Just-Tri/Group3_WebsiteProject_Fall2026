@@ -1,0 +1,63 @@
+body {
+background-color: #adebb3;
+}
+
+h6 {
+text-align: right;
+}
+
+
+.bgpc {
+background-image: url(images/manplaygame.jpg);
+filter: blur(6px);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.bgtxt {
+position: absolute;
+color: black; 
+border: 3px solid black;
+padding: 20px;
+font-weight: bold;
+text-align: center;
+font-size: 42px;
+top: 16%;
+left: 28%;
+
+}
+
+
+
+ul {
+list-style-type: none;
+margin: 0;
+top: 0;
+height: 45px;
+overflow: hidden;
+background-color: #0c9661;
+border: 3px solid black;
+}
+
+li {
+float: left;
+}
+
+li a {
+color: #b9ebd6;
+text-align: center;
+font-weight: bold;
+font-size: 30px;
+padding: 35px 75px;
+text-decoration: none;
+}
+
+img {
+float: right;
+}
+
+h6 {
+text-align: right;
+}
+
