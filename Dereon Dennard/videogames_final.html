@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Current State of Video Games</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: white;
+            margin: 0;
+        }
+
+        header {
+            background-color: #292929;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            color: #00ff99;
+        }
+
+        nav {
+            background-color: #111;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        nav a:hover {
+            color: #00ff99;
+        }
+
+        main {
+            width: 85%;
+            margin: 25px auto;
+        }
+
+        section {
+            background-color: #292929;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #00ff99;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #555;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #00aa66;
+        }
+
+        button {
+            background-color: #00ff99;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #00cc77;
+        }
+
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 20px;
+            color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>The Current State of Video Games</h1>
+        <p>How gaming is changing in 2026</p>
+    </header>
+
+    <nav>
+        <a href="#technology">Technology</a>
+        <a href="#systems">Gaming Systems</a>
+        <a href="#trends">Trends</a>
+        <a href="#future">Future</a>
+    </nav>
+
+    <main>
+
+       
+<section>
+    <h2>Introduction</h2>
+
+    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e"
+         alt="Video game controller"
+         width="500">
+
+    <p>
+        Video games have become a major part of entertainment.
+        Millions of people play games on consoles, computers,
+        smartphones, and handheld devices.
+    </p>
+
+    <p>
+        In 2026, the gaming industry continues to develop new
+        technology, online experiences, and different ways to play.
+    </p>
+</section>
+
+
+
+        <section id="technology">
+            <h2>New Gaming Technology</h2>
+
+            <p>
+                Modern video games use advanced graphics, artificial
+                intelligence, and powerful hardware. These technologies
+                help create larger worlds and more realistic gameplay.
+            </p>
+
+            <ul>
+                <li>Better graphics and performance</li>
+                <li>Artificial intelligence in games</li>
+                <li>Virtual reality</li>
+                <li>Cloud gaming</li>
+                <li>Faster internet connections</li>
+            </ul>
+        </section>
+
+        <section id="systems">
+            <h2>Gaming Systems</h2>
+
+            <table>
+                <tr>
+                    <th>System</th>
+                    <th>What It Offers</th>
+                </tr>
+
+                <tr>
+                    <td>PlayStation</td>
+                    <td>Console gaming and exclusive experiences</td>
+                </tr>
+
+                <tr>
+                    <td>Xbox</td>
+                    <td>Online gaming and game subscription services</td>
+                </tr>
+
+                <tr>
+                    <td>Nintendo</td>
+                    <td>Creative games and family entertainment</td>
+                </tr>
+
+                <tr>
+                    <td>PC</td>
+                    <td>Upgrades, mods, and many different games</td>
+                </tr>
+
+                <tr>
+                    <td>Mobile</td>
+                    <td>Gaming on smartphones and tablets</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="trends">
+            <h2>Popular Gaming Trends</h2>
+
+            <p>
+                Some important trends in gaming include online multiplayer,
+                esports, streaming, cross-platform play, and free-to-play
+                games. Players can now connect with friends and compete
+                with people from around the world.
+            </p>
+
+            <p>
+                Game developers are also exploring new ways to use
+                artificial intelligence and other technologies.
+            </p>
+        </section>
+
+        <section id="future">
+            <h2>The Future of Gaming</h2>
+
+            <p>
+                The future of video games may include more realistic worlds,
+                smarter game characters, improved virtual reality, and
+                new gaming devices. As technology improves, players will
+                have more ways to enjoy their favorite games.
+            </p>
+
+            <button onclick="showMessage()">
+                Click for a Gaming Fact
+            </button>
+
+            <p id="fact"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Created for a school project | 2026</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            document.getElementById("fact").innerHTML =
+                "Gaming combines technology, creativity, and entertainment!";
+        }
+    </script>
+
+</body>
+</html>

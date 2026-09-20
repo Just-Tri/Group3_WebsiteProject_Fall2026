@@ -1,3 +1,4 @@
+<!--Tri Vu-->
 <html>
 <head>
     <title>History of Video Games</title>
@@ -25,7 +26,7 @@
             box-sizing: border-box;
         }
 
-        /* Navigation Bar Styles */
+        /* <!-- Navigation Bar --> */
         .menubar {
             list-style-type: none;
             margin: 0;
@@ -36,18 +37,19 @@
             border: 3px solid black;
         }
 
-            .menubar li {
-                float: left;
-            }
+        .menubar li {
+            float: left;
+        }
 
-                .menubar li a {
-                    color: #b9ebd6;
-                    text-align: center;
-                    font-weight: bold;
-                    font-size: 30px;
-                    padding: 35px 75px;
-                    text-decoration: none;
-                }
+        .menubar li a {
+            color: #b9ebd6;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 20px 20px;
+            text-decoration: none;
+        }
+        /* <!-- Navigation Bar --> */
 
         p {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -173,17 +175,27 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            gap: 80px;
+            gap: 40px;
             width: 100%;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
+
+            .image-row > img {
+                width: 320px;
+                height: 240px;
+                object-fit: cover;
+                border-radius: 8px;
+                border: 2px solid #00d2ff;
+                box-shadow: 0 0 15px #00d2ff, 0 0 30px rgba(0, 210, 255, 0.4);
+            }
 
         .image-unit {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
-            width: 300px;
+            width: 320px;
             text-align: center;
         }
 
@@ -199,13 +211,24 @@
                 text-shadow: 0 0 4px rgba(0, 255, 102, 0.6);
             }
 
+            .image-unit img {
+                width: 100%;
+                height: 240px;
+                object-fit: cover;
+                border-radius: 8px;
+                border: 2px solid #00d2ff;
+                box-shadow: 0 0 15px #00d2ff, 0 0 30px rgba(0, 210, 255, 0.4);
+            }
+
         .image-unit-large {
             width: 420px;
+            max-width: 100%;
         }
 
             .image-unit-large img {
-                width: 420px;
-                height: 420px;
+                width: 100%;
+                height: 260px;
+                object-fit: cover;
             }
 
         .date-subtext {
@@ -239,7 +262,6 @@
                 transform: scale(1.05);
             }
 
-        /* Article-Style Quick Navigation Block */
         .quick-nav-container {
             max-width: 420px;
             margin: 25px auto 45px auto;
@@ -369,25 +391,25 @@
     </style>
 </head>
 <body>
-    <a href="../Maya Collins/homepage.html">To Next Page</a>
     <div class="page-container">
         <h1 style="text-align: center;">History of Video Games</h1>
 
-        <!-- Maya's Navigation Bar -->
+        <!-- Navigation Bar -->
         <div class="menubar">
             <nav>
                 <ul>
                     <bold>
-                        <li><a href="homepage.html">Home</a></li>
-                        <li><a href="page1.html">Rundown </a></li>
-                        <li><a href="page2.html">Evolution</a></li>
-                        <li><a href="page3.html">Current State</a></li>
-                        <li><a href="page4.html">Industry Future</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="../Maya Collins/homepage.html">Home Page</a></li>
+                        <li><a href="../Tri Vu/TV_Page1_GameHistory.html">History of Video Games </a></li>
+                        <li><a href="../Joshua Cruse/Evolution_draft.html">Evolution of Video Games</a></li>
+                        <li><a href="../Dereon Dennard/videogames_final.html">Current State of Video Games</a></li>
+                        <!--<li><a href="page4.html">Industry Future</a>Future of Video Games</li>-->
+                        <!--<li><a href="contact.html">Contact Us</a></li>-->
                     </bold>
                 </ul>
             </nav><br>
         </div>
+        <!-- Navigation Bar -->
 
         <div id="TableOfContents" class="quick-nav-container">
             <h3 class="quick-nav-title">Table of Contents</h3>

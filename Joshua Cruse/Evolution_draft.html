@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Evolution of Video Games</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #202124;
+      background: #2f4f4f;
+
+    }
+    header {
+      padding: 54px 20px;
+      text-align: center;
+      color: rgb(0, 0, 0);
+      background: #183f1d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+    header img {
+      width: 110px;
+      height: 110px;
+      flex: 0 0 110px;
+      image-rendering: pixelated;
+    }
+    header .intro { max-width: 650px; }
+    h1 { margin: 0 0 12px; font-size: clamp(2rem, 6vw, 3.5rem); }
+    header p { margin: 0; font-size: 1.1rem; }
+    nav {
+      background: #123016;
+      padding: 12px 20px;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+    main { width: min(850px, calc(100% - 40px)); margin: 0 auto; padding: 50px 0; }
+    .timeline { position: relative; padding-left: 45px; }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 14px;
+      width: 4px;
+      background: #228b32;
+      border-radius: 2px;
+    }
+    .event { position: relative; margin-bottom: 32px; padding: 24px; background: white; border-radius: 10px; box-shadow: 0 2px 8px #dfe3ed; }
+    .event::before {
+      content: "";
+      position: absolute;
+      left: -40px;
+      top: 27px;
+      width: 18px;
+      height: 18px;
+      border: 4px solid #144924;
+      border-radius: 50%;
+      background: #f5f7fb;
+    }
+    h2 { margin: 0 0 10px; font-size: 1.4rem; color: #096928; }
+    p { margin: 0; line-height: 1.55; }
+    footer { padding: 24px; text-align: center; color: white; background: #202124; }
+    @media (max-width: 500px) { .event { padding: 18px; } .timeline { padding-left: 38px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://www.realclipart.com/png/small/160-1608440_pac-man-by-dillanmurillo-pac-man-no-background.png" alt="Pac-man By Dillanmurillo - Pac Man No Background @realclipart.com">
+    <div class="intro">
+      <h1>The Evolution of Video Games</h1>
+      <p>A trip through history. From simple pixels to connecting the world.</p>
+    </div>
+    <img alt="Pixel-art Tetris blocks in cyan, pink, and yellow arranged in separate geometric shapes against a dark green square background; the bright colors create a playful, energetic tone, with no text present" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 110 110'%3E%3Crect width='110' height='110' fill='%230d2411'/%3E%3Cpath fill='%2300d9ff' d='M10 10h20v20H10zM30 10h20v20H30zM50 10h20v20H50zM30 30h20v20H30z'/%3E%3Cpath fill='%23ff2d55' d='M70 10h20v20H70zM70 30h20v20H70zM50 50h20v20H50zM70 50h20v20H70z'/%3E%3Cpath fill='%23ffd400' d='M10 70h20v20H10zM30 70h20v20H30zM50 70h20v20H50zM50 90h20v10H50z'/%3E%3C/svg%3E">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="page1.html">Summary</a></li>
+      <li><a href="page2.html">History</a></li>
+      <li><a href="page3.html">Current State</a></li>
+      <li><a href="page4.html">Future of Industry</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="timeline">
+      <article class="event">
+        <h2>1958 — Tennis for Two</h2>
+        <p>Physicist William Higinbotham creates an early interactive game on an oscilloscope. It is one of the first games made for entertainment.</p>
+      </article>
+
+      <article class="event">
+        <h2>1972 — The Arcade Begins</h2>
+        <p>Atari releases Pong. Its simple table-tennis gameplay becomes a huge success and helps introduce video games to the public.</p>
+      </article>
+
+      <article class="event">
+        <h2>Late 1970s — Home Consoles</h2>
+        <p>The Atari 2600 brings interchangeable game cartridges into living rooms, making home gaming more popular.</p>
+      </article>
+
+      <article class="event">
+        <h2>1980s — Arcade Icons</h2>
+        <p>Games such as <a href="https://freepacman.org/">Pac-Man</a>, <a href="https://freekong.org/">Donkey Kong</a>, and <a href="https://play.tetris.com/">Tetris</a> became cultural icons. Nintendo also introduces the Nintendo Entertainment System (NES) which was famously Launched with Super Mario Bros and Duck Hunt.</p>
+      </article>
+
+      <article class="event">
+        <h2>1990s — 3D Gaming</h2>
+        <p>Consoles like the PlayStation and Nintendo 64 make 3D worlds widely available. Games become larger, more cinematic, and more immersive.</p>
+      </article>
+
+      <article class="event">
+        <h2>2000s — Gaming Goes Online</h2>
+        <p>Broadband internet allows players to compete and cooperate online. Xbox Live, PC gaming, and massive multiplayer games connect people around the world.</p>
+      </article>
+
+      <article class="event">
+        <h2>2010s — Mobile and Indie Games</h2>
+        <p>Smartphones put games in millions of pockets, while independent creators reach new audiences through digital stores and streaming platforms.</p>
+      </article>
+
+      <article class="event">
+        <h2>2020s — Games Today</h2>
+        <p>Games are played across consoles, computers, phones, and cloud services. Cross-play, virtual reality, live updates, and esports continue to change how people play.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>Video games continue to evolve—what comes next?</footer>
+</body>
+</html>
